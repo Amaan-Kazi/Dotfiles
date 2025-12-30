@@ -1,0 +1,6 @@
+{{- $nvidia := promptBoolOnce . "nvidia" "Are Nvidia proprietary graphics drivers installed" -}}
+{
+  "data": {
+    "nvidia": {{ $nvidia }}
+  }
+}
