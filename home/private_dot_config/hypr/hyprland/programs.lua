@@ -2,10 +2,10 @@
 ---- MY PROGRAMS ----
 ---------------------
 
+-- Set programs that you use
 Programs = {}
 
--- Set programs that you use
-Programs.terminal = 'kitty'
-Programs.fileManager = 'nautilus'
--- Programs.menu = 'hyprlauncher'
-Programs.menu = 'wofi --show drun'
+Programs.terminal = "kitty"
+Programs.fileManager = "nautilus"
+Programs.menu = "wofi --show drun"
+Programs.browser = "Applications/zen/zen"

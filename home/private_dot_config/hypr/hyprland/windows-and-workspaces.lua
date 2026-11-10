@@ -3,7 +3,6 @@
 --------------------------------
 
 -- See https://wiki.hypr.land/configuring/core/rules/
-
 -- Example window rules that are useful
 
 local suppressMaximizeRule = hl.window_rule {
@@ -13,7 +12,7 @@ local suppressMaximizeRule = hl.window_rule {
 
   suppress_event = 'maximize',
 }
--- suppressMaximizeRule:set_enabled(false)
+suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule {
   -- Fix some dragging issues with XWayland
@@ -28,6 +27,34 @@ hl.window_rule {
   },
 
   no_focus = true,
+}
+
+hl.window_rule {
+  name = 'float-dialogs',
+  match = {
+    class = '^(.*dialog.*)$',
+  },
+
+  float = true,
+  center = true,
+}
+
+hl.window_rule {
+  name = 'float-programs',
+  match = {
+    class = '^(org\\.pulseaudio\\.pavucontrol|nm-connection-editor|org\\.gnome\\.Calculator|blueman-manager|org\\.gnome\\.Nautilus|xdg-desktop-portal|org.quickshell)$',
+  },
+
+  float = true,
+}
+
+hl.window_rule {
+  name = 'pin-pip',
+  match = {
+    title = '^(Picture-in-Picture|Picture in picture)$',
+  },
+  float = true,
+  pin = true,
 }
 
 -- Layer rules also return a handle.

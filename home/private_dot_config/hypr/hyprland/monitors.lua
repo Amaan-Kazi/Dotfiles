@@ -3,9 +3,9 @@
 ------------------
 
 -- See https://wiki.hypr.land/configuring/core/monitors/
-hl.monitor {
-  output = '',
-  mode = 'preferred',
-  position = 'auto',
-  scale = 'auto',
-}
+hl.monitor({
+  output = "",
+  mode = "highrr", -- select highest refresh rate mode
+  position = "auto",
+  scale = "auto",
+})
